@@ -67,8 +67,6 @@ export const getBooksHandler = (req, res) => {
       publisher,
     }));
 
-    console.log(books);
-
     return res.status(200).json({
       status: 'success',
       data: { books: formattedBook },
@@ -150,7 +148,7 @@ export const updateBookHandler = (req, res) => {
       finished: pageCount === readPage,
       ...req.body,
     };
-    console.log(books[index]);
+
     return res.status(200).json({
       status: 'success',
       message: 'Buku berhasil diperbarui',
